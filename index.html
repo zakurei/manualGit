@@ -69,7 +69,7 @@
 				<div class="row" id="apartado0">
 					<div class="span3"></div>
 					<div class="span6"  style="margin-left:8em">
-						<h2>Repositorio</h2>
+						<h2>REPOSITORIO</h2>
 						<hr/>
 						<p>
 En este apartado se hablará de como crear un repositorio nuevo y hacer una copia local del repositorio.
@@ -89,11 +89,8 @@ Si utilizamos un servidor remoto ejecutaremos:
 							<pre> git clone username@host:/ruta/repositorio </pre>
 Al clonar saldrá un mensaje como este:
 							<img src="img/imagen1.png"  style=" margin-top:1em"/>
-
-
 							
-						</div>
-						
+						</div>		
 								</div>
 								<hr>
 
@@ -114,39 +111,38 @@ Al clonar saldrá un mensaje como este:
 				<div class="row" id="apartado1" >
 					<div class="span3" ></div>
 					<div class="span6" style="margin-left:8em">
-						<h2>Cambios</h2>
+						<h2>CAMBIOS</h2>
 						<hr>
 						<p>
-						En este apartado se hablará de X,Y,Z...
+			En este apartado se hablará de como añadir y enviar cambios al repositorio
 						</p>
 						<div>
-							<h3>((((X))))</h3>
-							Git : Blob﹑Tree﹑Commit﹑Tag。
-							<ul style="margin-top:1em">Actualizar y fusionar
-								<li><b>Blob</b>: Explicación Blob</li>
-								<li><b>Tree</b>: Explicación Tree </li>
-								<li><b>Commit</b>: Expolicación Commit </li>
-								<li><b>Tag</b>: Exzplicación Tag </li>
-							</ul>	
+						<h3>git status </h3>
+Primero miraremos los cambios que hemos realizados con el siguiente comando:
+							<pre> git status</pre>
+Nos mostrará los cambios no añadidos en rojo y los que necesitan ser añadidos antes de hacer un commit en verde
+								<img src="img/imagenStatus.png">
 
-									<img src="img/">
+								<img src="img/imagenStatus2.png">
+
+						<h3>git add </h3>
+Podemos añadir cambios a nuestro repositorio con el siguiente comando:
+						<pre> git add nombreArchivo</pre>
+							
+
+									
 							</a>
 						</div>
 						<hr>
 						<div>
-							<h3>((((Y))))</h3>
-							algo<pre> git log 1a410e </pre>Torradaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa....
-							<ol style="margin-top:1em">
-								<li><b>head</b>:  explicación.................</li>
-								<li><b>tag</b>: explicación...................</li>
-								<li><b>remote</b>: explicación..........................</li>
-								<li><b>branch</b>: explicación.....................</li>
-							</ol>
+							<h3>git commit</h3>
+Deberemos hacer un commit después de hacer un add con el cual los cambios estarán listos para hacer un push y subirlos al repositorio remoto. Para esto usaremos el comando:
+							<pre> git commit -m "mensaje descriptivo" </pre>
+Usaremos un mensaje descriptivo sobre los cambios realizados y obtendremos un mensaje como el siguiente con los cambios:
+								<img src="img/imagenCommit.png">
+
 						</div>
 						<hr>
-						<div>
-							<h3>((((Z))))</h3>
-						</div>
 					</div>
 				</div>
 
@@ -164,27 +160,22 @@ Al clonar saldrá un mensaje como este:
 				<div class="row"  id="apartado2">
 					<div class="span3" ></div>
 					<div class="span6" style="margin-left:8em">
-						<h2>Sincronizar cambios</h2> 
+						<h2>SINCRONIZAR CAMBIOS </h2> 
 						<hr>
 						<p>
-						En este apartado se hablará de X,Y,Z...
+			En este apartado se hablará deL envío de cambios al repositorio remoto
 						</p>
 						<div id='gallery'>
-							<h3>((((X))))</h3>
-							algo Git algo：
-							<ol style="margin-top:1em">
-								<li><b style="color:red">（committed）</b>: explicación.........</li>
-								<li><b style="color:red">（modified）</b>: Explicación.........</li>
-								<li><b style="color:red">（staged）</b>: explicación................</li>
-							</ol>
+							<h3>git push</h3>
+Tus cambios están ahora en una zona de tu copia local preparados para ser enviados al repositorio remoto. Para enviar estos cambios ejecuta: 
+							<pre> git push origin master </pre>
+Reemplaza master por la rama a la que quieres enviar tus cambios. 
+							<img src="img/gitPush.png" />
+
+Si no has clonado un repositorio ya existente y quieres conectar tu repositorio local a un repositorio remoto, usa
+							<pre> git remote add origin server </pre>
 							<br>
-							algo Git algooooooooooooooooooooooooooooooooooooooooooooooooo<br>
-							<ol style="margin-top:1em">
-								<li><b style="color:red">Working Directory</b>: Explicación.......</li>
-								<li><b style="color:red">Staging area</b>: Explicación.........................................</li>
-								<li><b style="color:red">Repository</b>: Explicación.....................................................</li>
-							</ol>
-								<img src="img/" style="margin-left:5em"/>
+								
 							</a>
 						</div>
 					</div>
