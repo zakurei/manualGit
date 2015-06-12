@@ -22,7 +22,6 @@
 					<a href="index.html" class="brand" style="margin-left:4em;margin-right:30em">Git</a>
 					<ul class="nav" id="scroll_side">
            <li class="active" id="learn"><a href="#tutorial">Tutorial</a></li>
-						<li id="sld"><a href="videos.html">Videos</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -40,7 +39,7 @@
 					</ul>
 				</nav>
 
-				<!-- Apply scroll down to hash tag and automatically change the active class-->
+				
 				<script>
 					var main = main = $('#scroll_down ul');
 
@@ -54,13 +53,9 @@
 					        target_offset = $('#'+trgt).offset(),
 					        target_top = target_offset.top;
 					        
-					    $('html, body').animate({scrollTop:target_top}, 500);
-					    
-					    /* Remove active class on any li when an anchor is clicked */
+					    $('html, body').animate({scrollTop:target_top}, 500);		   
 					    
 					    main.children().removeClass();
-					    
-					    /* Add active class to clicked anchor's parent li */
 					        
 					    $(this).parent().addClass('active');
 
@@ -101,7 +96,6 @@ Al clonar saldrá un mensaje como este:
 
 				<script>
 					$('#apartado0').photobox('a');
-					// or with a fancier selector and some settings, and a callback:
 					$('#apartado0').photobox('a:first', { thumbs:false, time:0 }, imageLoaded);
 					function imageLoaded(){
 						console.log('image has been loaded...');
@@ -149,7 +143,6 @@ Usaremos un mensaje descriptivo sobre los cambios realizados y obtendremos un me
 
 				<script>
 					$('#apartado1').photobox('a');
-					// or with a fancier selector and some settings, and a callback:
 					$('#apartado1').photobox('a:first', { thumbs:false, time:0 }, imageLoaded);
 					function imageLoaded(){
 						console.log('image has been loaded...');
@@ -163,33 +156,25 @@ Usaremos un mensaje descriptivo sobre los cambios realizados y obtendremos un me
 						<h2>SINCRONIZAR CAMBIOS </h2> 
 						<hr>
 						<p>
-						En este apartado se hablará de X,Y,Z...
+			En este apartado se hablará deL envío de cambios al repositorio remoto
 						</p>
-						<div id='gallery'>
-							<h3>((((X))))</h3>
-							algo Git algo：
-							<ol style="margin-top:1em">
-								<li><b style="color:red">（committed）</b>: explicación.........</li>
-								<li><b style="color:red">（modified）</b>: Explicación.........</li>
-								<li><b style="color:red">（staged）</b>: explicación................</li>
-							</ol>
+						
+							<h3>git push</h3>
+Tus cambios están ahora en una zona de tu copia local preparados para ser enviados al repositorio remoto. Para enviar estos cambios ejecuta: 
+							<pre> git push origin master </pre>
+Reemplaza master por la rama a la que quieres enviar tus cambios. 
+							<img src="img/gitPush.png" />
+
+Si no has clonado un repositorio ya existente y quieres conectar tu repositorio local a un repositorio remoto, usa
+							<pre> git remote add origin server </pre>
 							<br>
-							algo Git algooooooooooooooooooooooooooooooooooooooooooooooooo<br>
-							<ol style="margin-top:1em">
-								<li><b style="color:red">Working Directory</b>: Explicación.......</li>
-								<li><b style="color:red">Staging area</b>: Explicación.........................................</li>
-								<li><b style="color:red">Repository</b>: Explicación.....................................................</li>
-							</ol>
-								<img src="img/" style="margin-left:5em"/>
-							</a>
-						</div>
+								
+							</a>	
 					</div>
 				</div>
 
-
 				<script>
 					$('#gallery').photobox('a');
-					// or with a fancier selector and some settings, and a callback:
 					$('#gallery').photobox('a:first', { thumbs:false, time:0 }, imageLoaded);
 					function imageLoaded(){
 						console.log('image has been loaded...');
@@ -200,148 +185,58 @@ Usaremos un mensaje descriptivo sobre los cambios realizados y obtendremos un me
 				<div class="row" id="apartado3">
 					<div class="span3"></div>
 					<div class="span6" style="margin-left:8em">
-						<h2>APARTADO3 </h2>
+						<h2>CAMBIOS EN GRUPO </h2>
 						<hr>
 						<p>
-						En este apartado se hablará de X,Y,Z,W...
+					En este apartado se hablará sobre el uso de ramas.
 						</p>
-						<h3>((((X))))</h3>
-						<hr>
-						<div id="gallery01">
-							<p>
-Github Torradaaaaaa.............................<br/>
- GitHub torrada larga ..................
-							</p>
-						<hr/>
-						<h3>((((Y))))</h3>
-						<hr>
-							<p>
-									<img src="img/" style="margin-left:-2em"/>		
-								</a>
-							</p>
-						<hr>
-						<h3>repository ((((Z))))</h3>
-						<hr>
-							<p>
-								algo repository torrada....................................................................................................
-									<img src="img/" style="margin-left:8.5em">
-								</a>
-							</p>
-						<hr>
-						<h3> ((((W))))</h3>
-						<hr>
-							<p>
-								 Github xxxxxxxxxxxxxxxxxxxxxxxxxxx
-							</p>
-							<p>
-								yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy SSH KEY<br>
-									<img src="img/" style="margin-top:1em">
-								</a>
-							</p>
-							<br>
-							<p>
-								zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz SSH KEY
-							</p>
-						<hr>
-						<h3> repository  Github repository h333333333</h3>
-						<hr>
-							<p>
-								algo repository，Github repository remote etcccc<br>
-								<pre>
-git remote add origin git@github.com:your_account/sandbox.git </br>
-git push -u origin master</br>
-								</pre>
+Las ramas son utilizadas para desarrollar funcionalidades aisladas unas de otras. La rama master es la rama "por defecto" cuando creas un repositorio. Crea nuevas ramas durante el desarrollo y fusiónalas a la rama principal cuando termines.
 
-								algooo<br>
-
-								<pre> 
-								git push<br>
-								</pre> 
-							</p>
+						<h3>git checkout</h3>
+Creamos una nueva rama llamada "rama1" y nos cambiaremos a ella usando: 
+						<pre> git checkout -b rama1 </pre>
+Volveremos a la rama principal con:
+						<pre> git checkout master </pre>
+Borraremos la rama con:
+						<pre> git checkout -d rama1 </pre>
+Las ramas no estarán en el repositorio remoto hasta que no hagamos un push de esa rama con:
+						<pre> git push origin rama1 </pre>
 						<hr>
 
-						<h3>Folk h33333333</h3>
-							<p>
-								Fork <br>
-								torrada............................................................................................................(Collaborators)，algo Clone así:<br>
-								<pre>
-									git clone git@github.com:Username/repository.git <br>
-								</pre>
-								algo (Collaborators)emmmmmmmmmmmmmmmmmmmmmmmmmm Git algo Clone así：<br>
-								<pre>
-									git clone git://github.com/Username/repository.git<br>
-								</pre>
-								<br>
-								tambien se puede poniendo HTTPS así<br>
-								<pre>
-									git clone https://github.com/Username/repository.git
-								</pre>	
-							</p>
-						<hr>
-
-						<h3>Pull h3333333333</h3>
-						<hr>
-							<p>
-								<pre>
-									 git pull origin master<br>
-								</pre>
-								algo git fetch algo branch，algo más branch  merge，algo merge commit 
-							</p>
-						<hr>
-
-						<h3>Push - Commit h333333 </h3>
-						<hr>
-							<p>
-								<pre>
-									 git push origin master<br>
-								</pre>
-								 master branch explicación
-							</p>	
-						<hr>	
-						</div>
+						
 					</div>
 				</div>
-
-				<!-- The photo gallery -->
-				<script>
-					$('#gallery01').photobox('a');
-					// or with a fancier selector and some settings, and a callback:
-					$('#gallery01').photobox('a:first', { thumbs:false, time:0 }, imageLoaded);
-					function imageLoaded(){
-						console.log('image has been loaded...');
-					}
-				</script>
 
 				<div class="row" id="apartado4">
 					<div class="span3"></div>
 					<div class="span6" style="margin-left:8em">
-						<h2>Git h22222222222</h2>
+						<h2>ACTUALIZAR Y FUSIONAR</h2>
 						<hr>
 						<div id ="Linux kernel">
-							<h4>Linux kernel</h3>
-							Git  Linux  Linus Torvalds torrada......................................................................<br><br>
-								<img src="img/">
+						En este apartado se hablará de como actualizar al commmit más nuevo y a fusionarlos.
+
+							<h3>git pull</h3>
+							Actualizamos nuestro repositorio local al commit más nuevo ejecutando:<br><br>
+							<pre>
+									git pull
+							</pre>
+								<img src="img/imagenPull.png">
 							</a>
 							<br><br>
-							Linux kernel on Github:<br>
+							<h3>git merge</h3>
+							Para fusionar otra rama a nuestra rama activa utilizamos:<br><br>
 							<pre>
-									https://github.com/torvalds/linux
+									git merge rama
 							</pre>
 						</div>
 						<div id="g0v.tw">
 							<p>
-								<h4>h4444444444</h4>
-									<img src="img/" style="margin-left:12em"/>
-								<br>
-								Torrada random......................................................
-								<br>
-								Torrada tocha random.................................................
-								<br>
-								no idea<a href="http://g0v.tw/">something to click</a> eaaa
-								</br>
-								Github Repository:<br>
+								<h3>git diff</h3>
+									
+								Antes de fusionar los cambios, puedes revisarlos usando:
+								<br><br>
 								<pre>
-								https://github.com/g0v
+								git diff source-branch target-branch
 								</pre>	
 							</p>
 						</div>		
