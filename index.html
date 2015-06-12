@@ -1,0 +1,436 @@
+<!Doctype HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta content="keywords" name="git tutorial">
+		<meta content="description" name="git tutorial">
+		<link href="css/bootstrap.min.css" rel="stylesheet" >
+		<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+		<link href="css/index.css" rel="stylesheet">
+		<link href="css/photobox.css" rel="stylesheet">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/carousel.js"></script>
+		<script src="js/scrollside.js"></script>
+		<script src="js/photobox.js"></script>
+		<title>Tutorial Git</title>
+	</head>
+	<body class="well fluid">
+		<header >
+			<nav class="navbar navbar-fixed-top">
+				<div class="navbar-inner">
+					<a href="index.html" class="brand" style="margin-left:4em;margin-right:30em">Git</a>
+					<ul class="nav" id="scroll_side">
+           <li class="active" id="learn"><a href="#tutorial">Tutorial</a></li>
+						<li id="sld"><a href="videos.html">Videos</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<article id="main" class="fluid">
+			<section id="tutorial">
+				<nav id="scroll_down">
+					<ul class="span3 nav nav-pills nav-stacked navbar-fixed-left" >
+						<li class="active" id="first"><a href="#apartado0" class="scroll">Apartado0</a></li>
+						<li><a href="#apartado1" class="scroll">Apartado1</a></li>
+						<li><a href="#apartado2" class="scroll">Apartado2</a></li>
+						<li><a href="#apartado3" class="scroll">Apartado3 </a></li>
+						<li><a href="#apartado4" class="scroll">Apartado4</a></li> 
+						<li><a href="https://github.com">GitHub</a></li>
+					</ul>
+				</nav>
+
+				<!-- Apply scroll down to hash tag and automatically change the active class-->
+				<script>
+					var main = main = $('#scroll_down ul');
+
+					$('.scroll').click(function(event) {
+					        
+					    event.preventDefault();
+					 
+					    var full_url = this.href,
+					        parts = full_url.split('#'),
+					        trgt = parts[1],
+					        target_offset = $('#'+trgt).offset(),
+					        target_top = target_offset.top;
+					        
+					    $('html, body').animate({scrollTop:target_top}, 500);
+					    
+					    /* Remove active class on any li when an anchor is clicked */
+					    
+					    main.children().removeClass();
+					    
+					    /* Add active class to clicked anchor's parent li */
+					        
+					    $(this).parent().addClass('active');
+
+					});
+				</script>
+				<div class="row" id="apartado0">
+					<div class="span3"></div>
+					<div class="span6"  style="margin-left:8em">
+						<h2>APARTADO0</h2>
+						<hr/>
+						<p>
+						En este apartado se hablará de X,Y,Z...
+						</p>
+						<h3 style="text-align:center">((((X))))</h3>
+						<div>
+							<pre> git log 1a410e </pre>
+						Explicacion：
+							<ul style="margin-top:1em">
+								<li>aaaaa</li>
+								<li>bbbbb</li>
+								<li>ccccc</li>
+								<li>dddddd</li>
+								<li>eeeee</li>
+							</ul>
+						Otra explicacion：
+							<ul style="margin-top:1em">
+								<li>fffff</li>
+								<li>gggg</li>
+								<li>hhhh</li>
+								<li>iiiii</li>
+							</ul>
+						</div>
+						<h3>((((Y))))</h3>
+						<div>
+							<pre> git log 1a410e </pre>
+							<p>
+								 Version Control System (VCS)
+								<ol>
+									<li>Repository</li>
+									<li>Repository2222 </li>
+									<li>Repository3333333 </li>
+									<li>Branch</li>
+									<li>Tag!!!!!!!!!!!</li>
+								</ol>	
+							</p>
+						</div>
+						<h3>((((Z))))</h3>
+						<div>
+							<pre> git log 1a410e </pre>
+							<p>
+								Otra explicacion mas：
+								<ol>
+									<li>Local VCS</li>
+									<li>Centralized VCS </li>
+									<li>Centralized VCS Merge</li>
+									<li>Distributed VCS</li>
+								</ol>
+								<hr>
+
+								<div >
+									<strong style="font-size:1.8em">Titulo imagen1</strong><br>
+									En esta imagen podemos ver blablabla...
+										<img src="img/imagen1.png"  style=" margin-top:1em"/>
+									</a>
+								</div>
+								<hr>
+
+								<div >
+									<strong style="font-size:1.8em">Centralized VCS</strong>
+									<br>
+									Explicación Centralized VCS<br>
+									vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv<br>
+										<img src="img/" style="margin-left:2.5em;margin-top:1em"> 
+									</a>
+								</div>
+								<hr>
+
+								<div>
+									<strong style="font-size:1.8em">Centralized VCS(Merge)</strong><br>
+									Explicación Centralized VCS(Merge)<br>
+
+									
+										<img src="img/" style="margin-top:1em;margin-left:2.5em"/>
+									</a>
+								</div>
+								<hr>
+
+								<div>
+									<strong style="font-size:1.8em">Distributed VCS</strong><br>
+									Explicación Distributed VCS<br>
+
+									
+										<img src="img/" style="margin-top:1em;margin-left:2.5em"/>
+									</a>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+
+
+				<script>
+					$('#apartado0').photobox('a');
+					// or with a fancier selector and some settings, and a callback:
+					$('#apartado0').photobox('a:first', { thumbs:false, time:0 }, imageLoaded);
+					function imageLoaded(){
+						console.log('image has been loaded...');
+					}
+				</script>
+
+				<div class="row" id="apartado1" >
+					<div class="span3" ></div>
+					<div class="span6" style="margin-left:8em">
+						<h2>APARTADO1</h2>
+						<hr>
+						<p>
+						En este apartado se hablará de X,Y,Z...
+						</p>
+						<div>
+							<h3>((((X))))</h3>
+							Git : Blob﹑Tree﹑Commit﹑Tag。
+							<ul style="margin-top:1em">
+								<li><b>Blob</b>: Explicación Blob</li>
+								<li><b>Tree</b>: Explicación Tree </li>
+								<li><b>Commit</b>: Expolicación Commit </li>
+								<li><b>Tag</b>: Exzplicación Tag </li>
+							</ul>	
+
+									<img src="img/">
+							</a>
+						</div>
+						<hr>
+						<div>
+							<h3>((((Y))))</h3>
+							algo<pre> git log 1a410e </pre>Torradaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa....
+							<ol style="margin-top:1em">
+								<li><b>head</b>:  explicación.................</li>
+								<li><b>tag</b>: explicación...................</li>
+								<li><b>remote</b>: explicación..........................</li>
+								<li><b>branch</b>: explicación.....................</li>
+							</ol>
+						</div>
+						<hr>
+						<div>
+							<h3>((((Z))))</h3>
+						</div>
+					</div>
+				</div>
+
+
+				<script>
+					$('#apartado1').photobox('a');
+					// or with a fancier selector and some settings, and a callback:
+					$('#apartado1').photobox('a:first', { thumbs:false, time:0 }, imageLoaded);
+					function imageLoaded(){
+						console.log('image has been loaded...');
+					}
+				</script>
+
+
+				<div class="row"  id="apartado2">
+					<div class="span3" ></div>
+					<div class="span6" style="margin-left:8em">
+						<h2>APARTADO2</h2> 
+						<hr>
+						<p>
+						En este apartado se hablará de X,Y,Z...
+						</p>
+						<div id='gallery'>
+							<h3>((((X))))</h3>
+							algo Git algo：
+							<ol style="margin-top:1em">
+								<li><b style="color:red">（committed）</b>: explicación.........</li>
+								<li><b style="color:red">（modified）</b>: Explicación.........</li>
+								<li><b style="color:red">（staged）</b>: explicación................</li>
+							</ol>
+							<br>
+							algo Git algooooooooooooooooooooooooooooooooooooooooooooooooo<br>
+							<ol style="margin-top:1em">
+								<li><b style="color:red">Working Directory</b>: Explicación.......</li>
+								<li><b style="color:red">Staging area</b>: Explicación.........................................</li>
+								<li><b style="color:red">Repository</b>: Explicación.....................................................</li>
+							</ol>
+								<img src="img/" style="margin-left:5em"/>
+							</a>
+						</div>
+					</div>
+				</div>
+
+
+				<script>
+					$('#gallery').photobox('a');
+					// or with a fancier selector and some settings, and a callback:
+					$('#gallery').photobox('a:first', { thumbs:false, time:0 }, imageLoaded);
+					function imageLoaded(){
+						console.log('image has been loaded...');
+					}
+				</script>
+
+
+				<div class="row" id="apartado3">
+					<div class="span3"></div>
+					<div class="span6" style="margin-left:8em">
+						<h2>APARTADO3 </h2>
+						<hr>
+						<p>
+						En este apartado se hablará de X,Y,Z,W...
+						</p>
+						<h3>((((X))))</h3>
+						<hr>
+						<div id="gallery01">
+							<p>
+Github Torradaaaaaa.............................<br/>
+ GitHub torrada larga ..................
+							</p>
+						<hr/>
+						<h3>((((Y))))</h3>
+						<hr>
+							<p>
+									<img src="img/" style="margin-left:-2em"/>		
+								</a>
+							</p>
+						<hr>
+						<h3>repository ((((Z))))</h3>
+						<hr>
+							<p>
+								algo repository torrada....................................................................................................
+									<img src="img/" style="margin-left:8.5em">
+								</a>
+							</p>
+						<hr>
+						<h3> ((((W))))</h3>
+						<hr>
+							<p>
+								 Github xxxxxxxxxxxxxxxxxxxxxxxxxxx
+							</p>
+							<p>
+								yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy SSH KEY<br>
+									<img src="img/" style="margin-top:1em">
+								</a>
+							</p>
+							<br>
+							<p>
+								zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz SSH KEY
+							</p>
+						<hr>
+						<h3> repository  Github repository h333333333</h3>
+						<hr>
+							<p>
+								algo repository，Github repository remote etcccc<br>
+								<pre>
+git remote add origin git@github.com:your_account/sandbox.git </br>
+git push -u origin master</br>
+								</pre>
+
+								algooo<br>
+
+								<pre> 
+								git push<br>
+								</pre> 
+							</p>
+						<hr>
+
+						<h3>Folk h33333333</h3>
+							<p>
+								Fork <br>
+								torrada............................................................................................................(Collaborators)，algo Clone así:<br>
+								<pre>
+									git clone git@github.com:Username/repository.git <br>
+								</pre>
+								algo (Collaborators)emmmmmmmmmmmmmmmmmmmmmmmmmm Git algo Clone así：<br>
+								<pre>
+									git clone git://github.com/Username/repository.git<br>
+								</pre>
+								<br>
+								tambien se puede poniendo HTTPS así<br>
+								<pre>
+									git clone https://github.com/Username/repository.git
+								</pre>	
+							</p>
+						<hr>
+
+						<h3>Pull h3333333333</h3>
+						<hr>
+							<p>
+								<pre>
+									 git pull origin master<br>
+								</pre>
+								algo git fetch algo branch，algo más branch  merge，algo merge commit 
+							</p>
+						<hr>
+
+						<h3>Push - Commit h333333 </h3>
+						<hr>
+							<p>
+								<pre>
+									 git push origin master<br>
+								</pre>
+								 master branch explicación
+							</p>	
+						<hr>	
+						</div>
+					</div>
+				</div>
+
+				<!-- The photo gallery -->
+				<script>
+					$('#gallery01').photobox('a');
+					// or with a fancier selector and some settings, and a callback:
+					$('#gallery01').photobox('a:first', { thumbs:false, time:0 }, imageLoaded);
+					function imageLoaded(){
+						console.log('image has been loaded...');
+					}
+				</script>
+
+				<div class="row" id="apartado4">
+					<div class="span3"></div>
+					<div class="span6" style="margin-left:8em">
+						<h2>Git h22222222222</h2>
+						<hr>
+						<div id ="Linux kernel">
+							<h4>Linux kernel</h3>
+							Git  Linux  Linus Torvalds torrada......................................................................<br><br>
+								<img src="img/">
+							</a>
+							<br><br>
+							Linux kernel on Github:<br>
+							<pre>
+									https://github.com/torvalds/linux
+							</pre>
+						</div>
+						<div id="g0v.tw">
+							<p>
+								<h4>h4444444444</h4>
+									<img src="img/" style="margin-left:12em"/>
+								<br>
+								Torrada random......................................................
+								<br>
+								Torrada tocha random.................................................
+								<br>
+								no idea<a href="http://g0v.tw/">something to click</a> eaaa
+								</br>
+								Github Repository:<br>
+								<pre>
+								https://github.com/g0v
+								</pre>	
+							</p>
+						</div>		
+					</div>
+				</div>
+				
+				<script>
+					$('#apartado4').photobox('a');
+					// or with a fancier selector and some settings, and a callback:
+					$('#apartado4').photobox('a:first', { thumbs:false, time:0 }, imageLoaded);
+					function imageLoaded(){
+						console.log('image has been loaded...');
+					}
+
+				</script>
+			</section>
+		</article>
+		<hr/>				
+		<footer class="row-fluid" style="margin-left:35em">
+				<div class="container">
+					<p>
+						<i class="icon-check icon-black"></i>
+						Más información en <a href="https://zh.wikipedia.org/wiki/Git">wiki-git</a> o <a href="https://help.github.com/articles/set-up-git">Github</a>
+					</p>
+				</div>
+		</footer>
+	</body>
+</html>

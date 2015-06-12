@@ -1,0 +1,13 @@
+/*try.css*/
+
+body{
+	overflow-x:hidden;
+}
+.span9{
+	border-radius: 1em;
+	border:0.3em solid gray;
+	margin-top: 5em;
+	margin-left:17em;
+	text-align:center;
+	padding:1em;
+}

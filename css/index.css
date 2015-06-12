@@ -1,0 +1,38 @@
+/*index.css*/
+
+body{
+	overflow-x:hidden;
+}
+#scroll_down{
+	position: fixed;
+}
+#scroll_down a:hover {
+	background: #gray;
+}
+
+.span6{
+	border: 0.3em solid gray;
+	margin-top: 5em;
+	border-radius: 1em;
+	padding: 1em; 
+}
+.span6 h2{
+	text-align: center;
+}
+.span6 h3{
+	text-align:center;
+}
+.span6 h4{
+	text-align:center;
+}
+.span6  p{
+	text-indent: 2em;
+	text-align: justify;
+}
+nav > ul {
+	border-radius:1em;
+	margin-top:5em;
+	margin-left:3em;
+	padding:1em;
+	border:0.3em solid gray;
+}
