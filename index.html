@@ -122,7 +122,7 @@ Al clonar saldrá un mensaje como este:
 						<div>
 							<h3>((((X))))</h3>
 							Git : Blob﹑Tree﹑Commit﹑Tag。
-							<ul style="margin-top:1em">
+							<ul style="margin-top:1em">Actualizar y fusionar
 								<li><b>Blob</b>: Explicación Blob</li>
 								<li><b>Tree</b>: Explicación Tree </li>
 								<li><b>Commit</b>: Expolicación Commit </li>
@@ -164,7 +164,7 @@ Al clonar saldrá un mensaje como este:
 				<div class="row"  id="apartado2">
 					<div class="span3" ></div>
 					<div class="span6" style="margin-left:8em">
-						<h2>APARTADO2</h2> 
+						<h2>Sincronizar cambios</h2> 
 						<hr>
 						<p>
 						En este apartado se hablará de X,Y,Z...
@@ -319,33 +319,33 @@ git push -u origin master</br>
 				<div class="row" id="apartado4">
 					<div class="span3"></div>
 					<div class="span6" style="margin-left:8em">
-						<h2>Git h22222222222</h2>
+						<h2>ACTUALIZAR Y FUSIONAR</h2>
 						<hr>
 						<div id ="Linux kernel">
-							<h4>Linux kernel</h3>
-							Git  Linux  Linus Torvalds torrada......................................................................<br><br>
-								<img src="img/">
+						En este apartado se hablará de como actualizar al commmit más nuevo y a fusionarlos.
+
+							<h3>git pull</h3>
+							Actualizamos nuestro repositorio local al commit más nuevo ejecutando:<br><br>
+							<pre>
+									git pull
+							</pre>
+								<img src="img/imagenPull.png">
 							</a>
 							<br><br>
-							Linux kernel on Github:<br>
+							<h3>git merge</h3>
+							Para fusionar otra rama a nuestra rama activa utilizamos:<br><br>
 							<pre>
-									https://github.com/torvalds/linux
+									git merge rama
 							</pre>
 						</div>
 						<div id="g0v.tw">
 							<p>
-								<h4>h4444444444</h4>
-									<img src="img/" style="margin-left:12em"/>
-								<br>
-								Torrada random......................................................
-								<br>
-								Torrada tocha random.................................................
-								<br>
-								no idea<a href="http://g0v.tw/">something to click</a> eaaa
-								</br>
-								Github Repository:<br>
+								<h3>git diff</h3>
+									
+								Antes de fusionar los cambios, puedes revisarlos usando:
+								<br><br>
 								<pre>
-								https://github.com/g0v
+								git diff source-branch target-branch
 								</pre>	
 							</p>
 						</div>		
